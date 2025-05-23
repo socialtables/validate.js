@@ -53,7 +53,7 @@ module.exports = function(grunt) {
     },
     jasmine: {
       specs: {
-        src: "<%= pkg.name %>",
+        src: "validate.js",
         options: {
           keepRunner: true,
           vendor: "specs/vendor/**/*.js",
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
         }
       },
       coverage: {
-        src: "<%= jasmine.specs.src %>",
+        src: "validate.js",
         options: {
           vendor: "<%= jasmine.specs.options.vendor %>",
           specs: "<%= jasmine.specs.options.specs %>",
@@ -122,6 +122,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-notify');
 
   grunt.registerTask('default', 'watch');
-  grunt.registerTask('build', ['jshint:validate', 'jasmine:specs', 'uglify', 'docco']);
+  grunt.registerTask('build', ['jshint:validate', 'jasmine:specs', 'uglify']);
   grunt.registerTask('test', ['jshint', 'jasmine']);
 };
