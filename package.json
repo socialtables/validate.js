@@ -1,6 +1,6 @@
 {
   "name": "@socialtables/validate.js",
-  "version": "0.13.1",
+  "version": "0.13.2",
   "author": "Nicklas Ansman <nicklas@ansman.se>",
   "description": "Declarative validations for JavaScript. Fork of https://github.com/ansman/validate.js with security fixes",
   "main": "validate.js",
